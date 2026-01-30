@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Judwa — Join early access</title>
+  <meta name="description" content="Get notified when Judwa beta opens." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="theme">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Judwa home">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__text">Judwa</span>
+    </a>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Story</a>
+      <a class="nav__link" href="product.html">How it works</a>
+      <a class="nav__link nav__cta is-active" href="signup.html">Join early access</a>
+    </nav>
+    <button class="navbtn" aria-label="Open menu" aria-expanded="false" data-navbtn>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="bg" aria-hidden="true">
+    <div class="bg__blob bg__blob--a"></div>
+    <div class="bg__blob bg__blob--b"></div>
+    <div class="bg__grid"></div>
+  </div>
+
+  <main class="page">
+    <section class="wrap signup">
+      <div class="kicker reveal">Early access</div>
+      <h1 class="h1 reveal">Be first in line for the beta.</h1>
+      <p class="lead reveal">We’ll email you when it opens. No spam — only launch + important updates.</p>
+
+      <!-- Static demo form (hook up to your backend/provider) -->
+      <form class="form reveal" action="#" method="post" onsubmit="return window.JUDWA.handleSignup(event)">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+        </div>
+        <button class="btn btn--primary" type="submit">Join early access</button>
+        <p class="fine">By signing up, you agree to receive beta access emails. Unsubscribe anytime.</p>
+        <p class="fine" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="note reveal">
+        <p><strong>Developer note:</strong> Replace the form handler with your email provider (Google Forms, Mailchimp, Buttondown, Supabase, etc.). The UI/UX is ready.</p>
+      </div>
+    </section>
+
+    <footer class="footer footer--page">
+      <div class="wrap footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--mini">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__text">Judwa</span>
+          </div>
+          <div class="fine">© 2026 Judwa</div>
+        </div>
+        <div class="footer__right">
+          <a href="index.html">Story</a>
+          <a href="product.html">How it works</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
